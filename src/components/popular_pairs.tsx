@@ -1,4 +1,4 @@
-import { getImage } from "./card";
+import { getImage } from "../utils";
 
 function PopularPairs({ items }: { items: Array<string> }) {
   return (
