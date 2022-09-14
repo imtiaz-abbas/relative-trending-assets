@@ -17,7 +17,9 @@ function PopularPairs({ items }: { items: Array<string> }) {
         </div>
       </div>
       <div className="h-[30px] flex flex-col justify-center">
-        <p className="text-grey text-[12px] font-semibold">Popular pairs</p>
+        <p className="text-dark-grey text-[12px] font-semibold">
+          Popular pairs
+        </p>
       </div>
     </div>
   );

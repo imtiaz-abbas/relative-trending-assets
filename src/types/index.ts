@@ -2,7 +2,7 @@ export interface Asset {
   id: string;
   name: string;
   price: number;
-  tvl: number;
-  change: number;
+  total_value_locked: number;
+  percentage_change: number;
   popularPairs: Array<string>;
 }

@@ -7,11 +7,11 @@ import { assetThemeColor, getImage } from "../utils";
 
 function Card({ asset }: { asset: Asset }) {
   return (
-    <div className="flex flex-col items-center min-w-[290px]">
+    <div className="flex flex-col items-center w-[290px]">
       <div
-        className={`w-20 h-20 rounded-full bg-gradient-to-b from-[#626A881A] ${assetThemeColor(
+        className={`w-[100px] h-[100px] rounded-full bg-gradient-to-b from-[#626A881A] ${assetThemeColor(
           asset.id,
-        )} -mb-12 flex justify-center items-center`}
+        )} -mb-[50px] flex justify-center items-center`}
       >
         <img
           src={getImage(asset.id)}
@@ -23,7 +23,7 @@ function Card({ asset }: { asset: Asset }) {
       <div className="relative text-[12px]">
         <img src={cardBackground} alt="bg" width={"290px"} />
         <div className="absolute top-0 w-full h-full flex flex-col items-center">
-          <div className="mt-[75px] flex flex-col items-center">
+          <div className="mt-[75px] mb-[4px] flex flex-col items-center">
             <div className="h-[30px] flex flex-col justify-center">
               <p className="text-grey">{asset.name}</p>
             </div>
@@ -31,9 +31,9 @@ function Card({ asset }: { asset: Asset }) {
           <AssetTextBox
             label="Price"
             value={asset.price}
-            change={asset.change}
+            change={asset.percentage_change}
           />
-          <AssetTextBox label="TVL" value={asset.tvl} />
+          <AssetTextBox label="TVL" value={asset.total_value_locked} />
           <PopularPairs items={asset.popularPairs} />
         </div>
       </div>
